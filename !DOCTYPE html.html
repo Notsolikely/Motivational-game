@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivational Touch</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #282c34;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        #motivation-area {
+            font-size: 2em;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="motivation-area">Touch the screen for motivation!</div>
+
+    <script>
+        const motivationArea = document.getElementById('motivation-area');
+
+        // Array of motivational sayings
+        const motivationalSayings = [
+            "Believe in yourself!",
+            "You are stronger than you think!",
+            "Keep pushing forward!",
+            "Success is not final, failure is not fatal!",
+            "Dream it, believe it, achieve it!",
+            "You are capable of amazing things!",
+            "The only limit is the one you set yourself!",
+            "Don't stop when you're tired, stop when you're done!",
+            "Small steps lead to big achievements!",
+            "Embrace the journey, not just the destination!"
+        ];
+
+        // Function to show a random motivational saying
+        function showRandomMotivation() {
+            const randomIndex = Math.floor(Math.random() * motivationalSayings.length);
+            motivationArea.textContent = motivationalSayings[randomIndex];
+        }
+
+        // Listen for touch events and show a new motivational saying
+        document.body.addEventListener('touchstart', function() {
+            showRandomMotivation();
+        });
+    </script>
+</body>
+</html>
